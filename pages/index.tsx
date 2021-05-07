@@ -1,5 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
+import Footer from "../components/modules/footer";
+import Title from "../components/modules/title";
+import Menu from "../components/modules/menu";
+import Paragraph from "../components/modules/paragraph";
 
 export default function Home() {
   return (
@@ -10,155 +13,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <nav className="bg-white fixed w-full">
-          <div>
-            <div className="relative flex items-center h-16">
-              <div className="absolute inset-y-0 left-0 sm:hidden">
-                {/*Mobile menu button*/}
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                  aria-controls="mobile-menu"
-                  aria-expanded="false"
-                >
-                  <span className="sr-only">Open main menu</span>
-                  {/*
-            Icon when menu is closed.
-
-            Heroicon name: outline/menu
-
-            Menu open: "hidden", Menu closed: "block"
-          */}
-                  <svg
-                    className="block h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                  {/*
-            Icon when menu is open.
-
-            Heroicon name: outline/x
-
-            Menu open: "block", Menu closed: "hidden"
-        */}
-                  <svg
-                    className="hidden h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="flex-shrink-0 flex items-center">
-                <img
-                  className="h-8 w-auto"
-                  src="/logo.png"
-                  alt="RIBBIT &amp; ROO"
-                />
-                <p>RIBBIT &amp; ROO</p>
-              </div>
-              <div className="flex-1 flex justify-end items-center sm:items-stretch">
-                <div className="hidden justify-end sm:block sm:ml-6">
-                  <div className="flex space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                    <a
-                      href="#"
-                      className="bg-primary-green text-white px-3 py-2 rounded-md text-sm font-medium"
-                      aria-current="page"
-                    >
-                      Play Sessions
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Early Childcare Programs
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Gallery
-                    </a>
-
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Testamonials
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*Mobile menu, show/hide based on menu state. */}
-          <div className="sm:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {/*Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <a
-                href="#"
-                className="bg-primary-green text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page"
-              >
-                Play Sessions
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-primary-green hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Early Childhood Programs
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-primary-green hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Gallery
-              </a>
-
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-primary-green hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Testamonials
-              </a>
-            </div>
-          </div>
-        </nav>
-        <section className="h-96 mb-8">
-          <div className="h-full w-full bg-cover bg-black bg-opacity-75">
-            <div className="h-full w-full bg-cover bg-fixed bg-center bg-hero-image p-20 pt-48 text-white font-normal leading-loose uppercase">
-              <h3 className="text-3xl">Terms and Conditions</h3>
-              <p>All the small print</p>
-            </div>
-          </div>
-        </section>
+        <Menu />
+        <Title heading="Terms and Conditions" subheading="The small print" />
         <div className="container mx-auto px-32">
-          <p className="mb-8">
+          <Paragraph heading="TERMS &amp; CONDITIONS">
             Please read these terms carefully before you book any of our Ribbit
             &amp; Roo play sessions. These terms tell you about Ribbit &amp;
             Roo, how we will provide play sessions to you, how you or Ribbit
@@ -166,11 +24,8 @@ export default function Home() {
             issue and other important information. If you think that there is a
             mistake in these terms, please contact us at
             jennyh@ribbitandroo.com.au to discuss.
-          </p>
-          <h2 className="uppercase text-xl mb-4">
-            ACCEPTANCE OF TERMS &amp; CONDITIONS
-          </h2>
-          <p className="mb-8">
+          </Paragraph>
+          <Paragraph heading="ACCEPTANCE OF TERMS &amp; CONDITIONS">
             All those who wish to attend any Ribbit &amp; Roo play session must
             agree to the terms and conditions set out below. These are the terms
             and conditions which we provide Ribbit &amp; Roo play sessions to
@@ -184,7 +39,7 @@ export default function Home() {
             session's content confidential and not to copy or use any content of
             the program directly or indirectly. At the time of publishing all
             session information is correct.
-          </p>
+          </Paragraph>
           <h2 className="uppercase text-xl mb-4">
             ENROLMENTS, PAYMENT &amp; CANCELLATIONS
           </h2>
@@ -333,22 +188,7 @@ export default function Home() {
           </p>
         </div>
       </main>
-
-      <footer className="bg-gray-200">
-        <div className="flex flex-col mx-auto w-max justify-center ">
-          <div className="mb-8">
-            <img
-              className="h-24 w-auto"
-              src="/logo.png"
-              alt="RIBBIT &amp; ROO"
-            />
-          </div>
-          <div></div>
-          <div className="flex justify-center">
-            <p>Ribbit &amp; Roo ©</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
