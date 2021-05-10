@@ -1,9 +1,7 @@
-type NewType = {
+type ParagraphProps = {
   children: React.ReactNode;
   heading: string;
 };
-
-type ParagraphProps = NewType;
 
 const Paragraph = ({ children, heading }: ParagraphProps) => {
   return (
