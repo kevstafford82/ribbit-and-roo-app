@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Menu from "../modules/menu";
-import Footer from "../modules/footer";
+import { Menu, Footer } from "../modules";
 
 type PageProps = {
   children: React.ReactNode;

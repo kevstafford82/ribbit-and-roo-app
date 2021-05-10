@@ -11,4 +11,4 @@ const Paragraph = ({ children, heading }: ParagraphProps) => {
     </>
   );
 };
-export default Paragraph;
+export { Paragraph };

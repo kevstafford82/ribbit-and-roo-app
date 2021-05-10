@@ -16,4 +16,4 @@ const Title = ({ heading, subheading }: TitleProps) => {
   );
 };
 
-export default Title;
+export { Title };
