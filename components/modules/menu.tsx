@@ -1,13 +1,13 @@
 const Menu = () => {
   return (
-    <nav className="bg-white fixed w-full">
+    <nav className="bg-transparent fixed w-full">
       <div>
         <div className="relative flex items-center h-16">
           <div className="absolute inset-y-0 left-0 sm:hidden">
             {/*Mobile menu button*/}
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-primary-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-primary-green focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -61,10 +61,12 @@ const Menu = () => {
           <div className="flex-shrink-0 flex items-center">
             <img
               className="h-8 w-auto"
-              src="/logo.png"
+              src="/RibbitAndRoo.png"
               alt="RIBBIT &amp; ROO"
             />
-            <p>RIBBIT &amp; ROO</p>
+            <a href="/" className="text-white">
+              RIBBIT &amp; ROO
+            </a>
           </div>
           <div className="flex-1 flex justify-end items-center sm:items-stretch">
             <div className="hidden justify-end sm:block sm:ml-6">
@@ -80,21 +82,21 @@ const Menu = () => {
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:bg-primary-green px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Early Childcare Programs
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:bg-primary-green px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Gallery
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-primary-green hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:bg-primary-green px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Testamonials
                 </a>
